@@ -46,12 +46,13 @@ export default function ZoomGallery() {
         ease: "expoScale(0.5, 2)",
       });
 
+      const mobile = window.innerWidth < 768;
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: wrapEl,
           start: "top top",
-          end: "+=350%",
-          scrub: 2,
+          end: mobile ? "+=180%" : "+=350%",
+          scrub: mobile ? 0.8 : 2,
           pin: true,
           anticipatePin: 1,
           invalidateOnRefresh: true,

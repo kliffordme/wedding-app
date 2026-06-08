@@ -9,24 +9,29 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
+    const isMobile = window.innerWidth < 768;
+
+    if (isMobile) {
+      // Mobile: GSAP's normalizeScroll handles touch events so pins work correctly
+      ScrollTrigger.normalizeScroll(true);
+      requestAnimationFrame(() => ScrollTrigger.refresh());
+      return () => ScrollTrigger.normalizeScroll(false);
+    }
+
+    // Desktop: Lenis smooth scroll drives GSAP ticker
     const lenis = new Lenis({
-      autoRaf: false,       // GSAP ticker drives the RAF
-      duration: 1.4,        // slightly longer for a luxurious feel
+      autoRaf: false,
+      duration: 1.4,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
     });
 
-    // Keep ScrollTrigger in sync with Lenis scroll position
     lenis.on("scroll", ScrollTrigger.update);
 
-    const tickerFn = (time: number) => {
-      lenis.raf(time * 1000); // GSAP time is seconds; Lenis wants ms
-    };
+    const tickerFn = (time: number) => lenis.raf(time * 1000);
     gsap.ticker.add(tickerFn);
-    gsap.ticker.lagSmoothing(0); // prevents GSAP lag compensation breaking Lenis
+    gsap.ticker.lagSmoothing(0);
 
-    // ScrollTrigger sets up before Lenis (useLayoutEffect vs useEffect order).
-    // Refresh after Lenis is ready so pinned sections re-measure their positions.
     requestAnimationFrame(() => ScrollTrigger.refresh());
 
     return () => {
