@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Flip } from "gsap/Flip";
 
 gsap.registerPlugin(ScrollTrigger, Flip);
+ScrollTrigger.config({ ignoreMobileResize: true });
 
 // 7 photos fill the non-video cells; item 3 (col-2 rows 2-3) is the video
 const photos = [
@@ -53,6 +54,7 @@ export default function ZoomGallery() {
           scrub: 2,
           pin: true,
           anticipatePin: 1,
+          invalidateOnRefresh: true,
         },
       });
 
