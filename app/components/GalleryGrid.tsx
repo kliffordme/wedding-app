@@ -8,18 +8,18 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const galleryImages = [
-  { seed: "gal-1", alt: "Bride laughing with bridesmaids during preparations", tall: true },
-  { seed: "gal-2", alt: "Groom seeing his bride for the first time", tall: false },
-  { seed: "gal-3", alt: "Couple's intimate first look before the ceremony", tall: false },
-  { seed: "gal-4", alt: "Aerial view of an outdoor wedding ceremony", tall: true },
-  { seed: "gal-5", alt: "Exchange of vows under soft natural light", tall: false },
-  { seed: "gal-6", alt: "Close-up of wedding rings on the bridal bouquet", tall: false },
-  { seed: "gal-7", alt: "Guests dancing and celebrating at the reception", tall: true },
-  { seed: "gal-8", alt: "Wedding cake adorned with fresh garden flowers", tall: false },
-  { seed: "gal-9", alt: "Couple walking hand in hand at golden hour", tall: false },
-  { seed: "gal-10", alt: "Reception table details with candles and florals", tall: false },
-  { seed: "gal-11", alt: "Bride's portrait in soft window light", tall: true },
-  { seed: "gal-12", alt: "Couple sharing their first dance", tall: false },
+  { src: "/wedding-portrait.jpg",     alt: "Bride and groom portrait at golden hour",           tall: true  },
+  { src: "/wedding-coverage.jpg",     alt: "Couple exchanging vows at the ceremony",             tall: false },
+  { src: "/wedding-details.jpg",      alt: "Wedding rings and floral details",                   tall: false },
+  { src: "/wedding-memory.jpg",       alt: "An intimate wedding memory moment",                  tall: true  },
+  { src: "/wedding-reception.jpg",    alt: "Guests celebrating at the reception",                tall: false },
+  { src: "/wedding-promise-bnw.jpg",  alt: "A quiet promise between two people",                 tall: true  },
+  { src: "/wedding-coverage.jpg",     alt: "Ceremony aisle with guests in soft light",           tall: true  },
+  { src: "/wedding-portrait.jpg",     alt: "Couple sharing a quiet moment together",             tall: false },
+  { src: "/wedding-reception.jpg",    alt: "Candlelit reception table details",                  tall: false },
+  { src: "/wedding-details.jpg",      alt: "Close-up of wedding florals and stationery",         tall: true  },
+  { src: "/wedding-memory.jpg",       alt: "Golden hour portrait of the newlyweds",              tall: false },
+  { src: "/wedding-promise-bnw.jpg",  alt: "First dance under soft evening light",               tall: false },
 ];
 
 export default function GalleryGrid() {
@@ -51,7 +51,7 @@ export default function GalleryGrid() {
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
           {galleryImages.map((img, i) => (
             <div
-              key={img.seed}
+              key={i}
               ref={(el) => {
                 if (el) itemsRef.current[i] = el;
               }}
@@ -63,7 +63,7 @@ export default function GalleryGrid() {
                 }`}
               >
                 <Image
-                  src={`https://picsum.photos/seed/${img.seed}/${img.tall ? "600/800" : "800/600"}`}
+                  src={img.src}
                   alt={img.alt}
                   fill
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
