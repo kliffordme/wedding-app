@@ -1,26 +1,82 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-forest: #2C3E2D;
+  --color-forest-dark: #1e2e1f;
+  --color-ivory: #F5F0E8;
+  --color-ivory-dark: #EDE8DC;
+  --color-gold: #C9A84C;
+  --color-gold-light: #dfc070;
+
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F5F0E8;
+  color: #2C3E2D;
+  font-family: "Inter", system-ui, sans-serif;
 }
+
+/* Ensure GSAP-pinned sections work correctly */
+.pin-spacer {
+  pointer-events: none;
+}
+
+/* === ZoomGallery — Moments bento section === */
+.zoom-gallery-wrap {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.zoom-gallery {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex: none;
+}
+
+.zoom-gallery__item {
+  position: relative;
+  overflow: hidden;
+}
+
+.zoom-gallery__item img,
+.zoom-gallery__item video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.zoom-gallery--bento {
+  display: grid;
+  gap: 1vh;
+  grid-template-columns: repeat(3, 32.5vw);
+  grid-template-rows: repeat(4, 23vh);
+  justify-content: center;
+  align-content: center;
+}
+
+.zoom-gallery--final.zoom-gallery--bento {
+  grid-template-columns: repeat(3, 100vw);
+  grid-template-rows: repeat(4, 49.5vh);
+  gap: 1vh;
+}
+
+.zoom-gallery--bento .zoom-gallery__item:nth-child(1) { grid-area: 1 / 1 / 3 / 2; }
+.zoom-gallery--bento .zoom-gallery__item:nth-child(2) { grid-area: 1 / 2 / 2 / 3; }
+.zoom-gallery--bento .zoom-gallery__item:nth-child(3) { grid-area: 2 / 2 / 4 / 3; }
+.zoom-gallery--bento .zoom-gallery__item:nth-child(4) { grid-area: 1 / 3 / 3 / 4; }
+.zoom-gallery--bento .zoom-gallery__item:nth-child(5) { grid-area: 3 / 1 / 4 / 2; }
+.zoom-gallery--bento .zoom-gallery__item:nth-child(6) { grid-area: 3 / 3 / 5 / 4; }
+.zoom-gallery--bento .zoom-gallery__item:nth-child(7) { grid-area: 4 / 1 / 5 / 2; }
+.zoom-gallery--bento .zoom-gallery__item:nth-child(8) { grid-area: 4 / 2 / 5 / 3; }
