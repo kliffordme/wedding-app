@@ -8,12 +8,34 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const IMAGES = [
-  { src: "/wedding-coverage.jpg", alt: "Wedding Coverage" },
-  { src: "/wedding-portrait.jpg", alt: "Wedding Portrait" },
-  { src: "/wedding-details.jpg", alt: "Wedding Details" },
-  { src: "/wedding-reception.jpg", alt: "Wedding Reception" },
-  { src: "/wedding-memory.jpg", alt: "Wedding Memory" },
-  { src: "/wedding-promise.jpg", alt: "Wedding Promise" },
+  {
+    src: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=600&h=800&q=80",
+    alt: "Bride portrait",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=600&h=800&q=80",
+    alt: "Couple at ceremony",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?auto=format&fit=crop&w=600&h=800&q=80",
+    alt: "Wedding vows",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&h=800&q=80",
+    alt: "First dance",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=600&h=800&q=80",
+    alt: "Bridal party",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=600&h=800&q=80",
+    alt: "Wedding details",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1591604021695-0c69b7c05981?auto=format&fit=crop&w=600&h=800&q=80",
+    alt: "Reception",
+  },
 ];
 
 export default function HorizontalGallery() {
@@ -60,7 +82,7 @@ export default function HorizontalGallery() {
       <div
         ref={stripRef}
         className="
-          flex flex-nowrap will-change-transform
+          flex flex-nowrap
           pt-6 pb-12
           md:overflow-visible overflow-x-auto
           scroll-smooth snap-x snap-mandatory
@@ -79,7 +101,7 @@ export default function HorizontalGallery() {
                 alt={alt}
                 fill
                 className="object-cover transition-transform duration-700 ease-out hover:scale-105"
-                sizes="(max-width: 768px) 78vw, (max-width: 1024px) 38vw, 30vw"
+                sizes="(max-width: 768px) 78vw, (max-width: 1024px) 38vw, 32vw"
               />
             </div>
           </div>
