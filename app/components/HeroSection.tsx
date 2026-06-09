@@ -8,14 +8,25 @@ const heroVideos = ["/wedding-dinner.mp4", "/wedding-ring.mp4", "/wedding-close-
 export default function HeroSection() {
   const logoRef    = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
+  const taglineRef = useRef<HTMLParagraphElement>(null);
   const videoRefs  = useRef<(HTMLVideoElement | null)[]>([null, null, null]);
   const mountedRef = useRef(false);
   const [active, setActive] = useState(0);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(overlayRef.current, { opacity: 0, duration: 1.2, ease: "power2.out" });
-      gsap.from(logoRef.current,    { opacity: 0, y: 30, duration: 1.2, delay: 0.6, ease: "power3.out" });
+      gsap.fromTo(overlayRef.current,
+        { opacity: 0 },
+        { opacity: 1, duration: 1.2, ease: "power2.out" }
+      );
+      gsap.fromTo(logoRef.current,
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 1.2, delay: 0.6, ease: "power3.out" }
+      );
+      gsap.fromTo(taglineRef.current,
+        { opacity: 0, y: 12 },
+        { opacity: 1, y: 0, duration: 1, delay: 1.8, ease: "power2.out" }
+      );
     });
     return () => ctx.revert();
   }, []);
@@ -66,11 +77,12 @@ export default function HeroSection() {
 
       <div
         ref={overlayRef}
+        style={{ opacity: 0 }}
         className="absolute inset-0 bg-gradient-to-b from-forest/60 via-forest/40 to-forest/70"
       />
 
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
-        <div ref={logoRef} className="space-y-4">
+        <div ref={logoRef} style={{ opacity: 0 }} className="space-y-4">
           <div className="flex items-center justify-center gap-4 mb-6">
             <span className="block w-12 h-px bg-white/60" />
             <span className="text-white text-xs tracking-[0.35em] uppercase font-sans">
@@ -81,7 +93,7 @@ export default function HeroSection() {
           <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl text-white font-light tracking-wider leading-none">
             CARLOGAID
           </h1>
-          <p className="font-sans text-sm md:text-base tracking-[0.3em] uppercase text-white/80 mt-4">
+          <p ref={taglineRef} style={{ opacity: 0 }} className="font-sans text-sm md:text-base tracking-[0.3em] uppercase text-white/80 mt-4">
             Every moment, beautifully preserved
           </p>
         </div>

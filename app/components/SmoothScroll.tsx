@@ -12,10 +12,9 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
     const isMobile = window.innerWidth < 768;
 
     if (isMobile) {
-      // Mobile: GSAP's normalizeScroll handles touch events so pins work correctly
-      ScrollTrigger.normalizeScroll(true);
+      // Mobile: native scroll — no Lenis, no normalizeScroll
       requestAnimationFrame(() => ScrollTrigger.refresh());
-      return () => ScrollTrigger.normalizeScroll(false);
+      return;
     }
 
     // Desktop: Lenis smooth scroll drives GSAP ticker
