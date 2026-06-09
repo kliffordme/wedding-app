@@ -50,7 +50,7 @@ export default function ContactPage() {
                 </p>
                 <address className="not-italic font-sans text-sm text-forest/70 space-y-1 leading-relaxed">
                   <p className="font-medium text-forest">CARLOGAID</p>
-                  <p>Queensland, Australia</p>
+                  <p>Philippines</p>
                   <p>Available worldwide</p>
                 </address>
               </div>

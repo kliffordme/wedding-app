@@ -25,7 +25,7 @@ const packages = [
     highlight: false,
   },
   {
-    name: "CARLOGAID",
+    name: "Signature",
     tagline: "Our Signature Package",
     price: "From $5,500",
     description:
@@ -170,7 +170,7 @@ export default function PricingCards() {
 
         <p className="text-center font-sans text-xs text-forest/50 mt-12 tracking-wide">
           All packages are fully customisable. Travel fees may apply for
-          destinations outside Queensland.{" "}
+          destinations outside the Philippines.{" "}
           <Link href="/contact" className="text-gold hover:underline">
             Contact us
           </Link>{" "}

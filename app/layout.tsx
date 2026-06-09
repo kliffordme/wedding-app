@@ -18,7 +18,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "CARLOGAID | Wedding Photography",
   description:
-    "Documentary wedding photography that captures every glance, every laugh, every quiet breath between vows. Based in Queensland, available worldwide.",
+    "Documentary wedding photography that captures every glance, every laugh, every quiet breath between vows. Based in the Philippines, available worldwide.",
 };
 
 export default function RootLayout({

@@ -17,7 +17,7 @@ export default function AboutSection() {
           </h2>
           <div className="w-12 h-px bg-gold" />
           <p className="font-sans text-forest/70 leading-relaxed">
-            CARLOGAID is a Queensland-based wedding photography studio with a
+            CARLOGAID is a Philippines-based wedding photography studio with a
             passion for honest, documentary storytelling. We believe the most
             beautiful images are the ones that happen — not the ones that are
             posed.
@@ -28,7 +28,7 @@ export default function AboutSection() {
             always watching for the moments that matter most.
           </p>
           <p className="font-sans text-forest/70 leading-relaxed">
-            Available for weddings across Australia and worldwide. Every couple,
+            Available for weddings across the Philippines and worldwide. Every couple,
             every story, treated with the same care and artistry.
           </p>
           <Link

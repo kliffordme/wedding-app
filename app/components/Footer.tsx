@@ -10,7 +10,7 @@ export default function Footer() {
             CARLOGAID
           </p>
           <p className="font-sans text-sm text-ivory/60 leading-relaxed max-w-xs">
-            Documentary wedding photography based in Queensland, available
+            Documentary wedding photography based in the Philippines, available
             worldwide. We tell your story the way it truly happened.
           </p>
         </div>
@@ -40,7 +40,7 @@ export default function Footer() {
         <div className="space-y-4">
           <p className="text-xs tracking-[0.2em] uppercase text-gold font-sans">Contact</p>
           <address className="not-italic text-sm text-ivory/70 font-sans space-y-2">
-            <p>Queensland, Australia</p>
+            <p>Philippines</p>
             <a
               href="tel:+61712345678"
               className="block hover:text-gold transition-colors"
