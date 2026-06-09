@@ -33,7 +33,7 @@ const IMAGES = [
     alt: "Wedding details",
   },
   {
-    src: "https://images.unsplash.com/photo-1591604021695-0c69b7c05981?auto=format&fit=crop&w=600&h=800&q=80",
+    src: "https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=600&h=800&q=80",
     alt: "Reception",
   },
 ];
