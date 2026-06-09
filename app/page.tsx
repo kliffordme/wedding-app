@@ -4,6 +4,7 @@ import HeroSection from "./components/HeroSection";
 import AlternatingGallery from "./components/AlternatingGallery";
 import ZoomGallery from "./components/ZoomGallery";
 import PinnedSection from "./components/PinnedSection";
+import HorizontalGallery from "./components/HorizontalGallery";
 import AboutSection from "./components/AboutSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 
@@ -17,6 +18,7 @@ export default function HomePage() {
         <ZoomGallery />
         <AboutSection />
         <PinnedSection />
+        <HorizontalGallery />
         <TestimonialsSection />
       </main>
       <Footer />
