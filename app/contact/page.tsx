@@ -3,9 +3,9 @@ import Footer from "../components/Footer";
 import ContactForm from "../components/ContactForm";
 
 export const metadata = {
-  title: "Contact & Booking | CARLOGAID",
+  title: "Contact & Booking | Lumière",
   description:
-    "Enquire about wedding photography with CARLOGAID. We'll respond within 24 hours to start planning your perfect coverage.",
+    "Enquire about wedding photography with Lumière. We'll respond within 24 hours to start planning your perfect coverage.",
 };
 
 export default function ContactPage() {
@@ -49,7 +49,7 @@ export default function ContactPage() {
                   Find Us
                 </p>
                 <address className="not-italic font-sans text-sm text-forest/70 space-y-1 leading-relaxed">
-                  <p className="font-medium text-forest">CARLOGAID</p>
+                  <p className="font-medium text-forest">Lumière</p>
                   <p>Philippines</p>
                   <p>Available worldwide</p>
                 </address>
@@ -67,10 +67,10 @@ export default function ContactPage() {
                     +61 7 1234 5678
                   </a>
                   <a
-                    href="mailto:hello@carlogaid.com"
+                    href="mailto:hello@lumiere.com"
                     className="block hover:text-gold transition-colors"
                   >
-                    hello@carlogaid.com
+                    hello@lumiere.com
                   </a>
                 </div>
               </div>
@@ -93,7 +93,7 @@ export default function ContactPage() {
                 </p>
                 <div className="w-full aspect-[4/3] bg-forest/10 flex items-center justify-center border border-forest/10">
                   <iframe
-                    title="CARLOGAID location"
+                    title="Lumière location"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3570.0!2d151.9507!3d-27.5598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDMzJzM1LjMiUyAxNTHCsDU3JzAyLjUiRQ!5e0!3m2!1sen!2sau!4v1699999999999"
                     width="100%"
                     height="100%"

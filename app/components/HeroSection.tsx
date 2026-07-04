@@ -91,7 +91,7 @@ export default function HeroSection() {
             <span className="block w-12 h-px bg-white/60" />
           </div>
           <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl text-white font-light tracking-wider leading-none">
-            CARLOGAID
+            Lumière
           </h1>
           <p ref={taglineRef} style={{ opacity: 0 }} className="font-sans text-sm md:text-base tracking-[0.3em] uppercase text-white/80 mt-4">
             Every moment, beautifully preserved

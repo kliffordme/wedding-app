@@ -16,7 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "CARLOGAID | Wedding Photography",
+  title: "Lumière | Wedding Photography",
   description:
     "Documentary wedding photography that captures every glance, every laugh, every quiet breath between vows. Based in the Philippines, available worldwide.",
 };

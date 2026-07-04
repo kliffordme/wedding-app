@@ -41,7 +41,7 @@ export default function Navbar() {
             transparent ? "text-white" : "text-forest"
           }`}
         >
-          CARLOGAID
+          Lumière
         </Link>
 
         {/* Desktop nav */}

@@ -3,9 +3,9 @@ import Footer from "../components/Footer";
 import GalleryGrid from "../components/GalleryGrid";
 
 export const metadata = {
-  title: "Portfolio | CARLOGAID",
+  title: "Portfolio | Lumière",
   description:
-    "Browse the CARLOGAID wedding photography portfolio — documentary stories of couples from intimate elopements to full celebrations.",
+    "Browse the Lumière wedding photography portfolio — documentary stories of couples from intimate elopements to full celebrations.",
 };
 
 export default function GalleryPage() {

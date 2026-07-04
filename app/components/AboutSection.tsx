@@ -17,7 +17,7 @@ export default function AboutSection() {
           </h2>
           <div className="w-12 h-px bg-gold" />
           <p className="font-sans text-forest/70 leading-relaxed">
-            CARLOGAID is a Philippines-based wedding photography studio with a
+            Lumière is a Philippines-based wedding photography studio with a
             passion for honest, documentary storytelling. We believe the most
             beautiful images are the ones that happen — not the ones that are
             posed.

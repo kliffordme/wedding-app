@@ -29,7 +29,7 @@ const packages = [
     tagline: "Our Signature Package",
     price: "From $5,500",
     description:
-      "The complete CARLOGAID experience — full-day documentary coverage for couples who want every chapter of their story told.",
+      "The complete Lumière experience — full-day documentary coverage for couples who want every chapter of their story told.",
     features: [
       "Full day coverage (10+ hrs)",
       "2 photographers",
@@ -47,7 +47,7 @@ const packages = [
     tagline: "Complete & Timeless",
     price: "From $8,500",
     description:
-      "Everything in CARLOGAID, plus fine-art prints, a second album, and a cinematic highlight film to relive your day forever.",
+      "Everything in Lumière, plus fine-art prints, a second album, and a cinematic highlight film to relive your day forever.",
     features: [
       "Full day coverage (12+ hrs)",
       "2 photographers + videographer",

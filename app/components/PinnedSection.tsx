@@ -94,7 +94,7 @@ export default function PinnedSection() {
 
       <div className="absolute inset-0 flex flex-col items-center justify-end pb-24 px-6 text-center">
         <p ref={labelRef} className="text-xs uppercase text-gold font-sans mb-4">
-          The CARLOGAID Promise
+          The Lumière Promise
         </p>
         <h2
           ref={headlineRef}
@@ -108,7 +108,7 @@ export default function PinnedSection() {
           className="font-sans text-ivory/75 text-sm md:text-base leading-relaxed max-w-xl"
         >
           From the first enquiry to the final image delivered, every moment with
-          CARLOGAID is guided by artistry, warmth, and an unwavering commitment
+          Lumière is guided by artistry, warmth, and an unwavering commitment
           to telling your story exactly as it was.
         </p>
       </div>

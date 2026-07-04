@@ -4,9 +4,9 @@ import PricingCards from "../components/PricingCards";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Packages & Pricing | CARLOGAID",
+  title: "Packages & Pricing | Lumière",
   description:
-    "Explore CARLOGAID wedding photography packages — from intimate elopement coverage to full-day documentary storytelling.",
+    "Explore Lumière wedding photography packages — from intimate elopement coverage to full-day documentary storytelling.",
 };
 
 export default function PricingPage() {

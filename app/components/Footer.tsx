@@ -7,7 +7,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="space-y-4">
           <p className="font-serif text-3xl tracking-widest text-ivory">
-            CARLOGAID
+            Lumière
           </p>
           <p className="font-sans text-sm text-ivory/60 leading-relaxed max-w-xs">
             Documentary wedding photography based in the Philippines, available
@@ -48,10 +48,10 @@ export default function Footer() {
               +61 7 1234 5678
             </a>
             <a
-              href="mailto:hello@carlogaid.com"
+              href="mailto:hello@lumiere.com"
               className="block hover:text-gold transition-colors"
             >
-              hello@carlogaid.com
+              hello@lumiere.com
             </a>
           </address>
           {/* Instagram icon */}
@@ -77,14 +77,14 @@ export default function Footer() {
               <circle cx="12" cy="12" r="4" />
               <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
             </svg>
-            @carlogaid
+            @lumiere
           </a>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-ivory/10 flex flex-col md:flex-row justify-between items-center gap-4">
         <p className="text-xs text-ivory/40 font-sans tracking-wide">
-          © {new Date().getFullYear()} CARLOGAID. All rights reserved.
+          © {new Date().getFullYear()} Lumière. All rights reserved.
         </p>
         <p className="text-xs text-ivory/40 font-sans">
           Crafted with care for life&apos;s finest moments.
